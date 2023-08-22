@@ -6,5 +6,5 @@
 mkdir -p ~/catkin_ws/src
 cd catkin_ws/src/
 ```
-#Clone repository to src folder
+# Clone repository to src folder
 `git clone https://github.com/ ...`
