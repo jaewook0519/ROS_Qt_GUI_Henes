@@ -10,8 +10,9 @@ int main(int argc, char **argv)
     w.show();
 
     ros::NodeHandle nh;
-    //ROS 관련 작업, 노드 실행 ros::spin()
-    //ROS 토픽 구독 코드 추가
+    ros::Subscriber steeringAngleSub = nh.subscribe("/steering_angle", 1, &MainWindow::steeringAngleCallback, &w);
+    ros::Subscriber odomSub = nh.subscribe("/odom", 1, &MainWindow::odomCallback, &w); 
+    ros::spin();
 
     return a.exec();
 }
