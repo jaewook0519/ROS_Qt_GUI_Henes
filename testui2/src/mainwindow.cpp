@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    steeringAngleSub = nh.subscribe("/steering-angle", 1, &MainWindow::steeringAngleCallback, this);
+    steeringAngleSub = nh.subscribe("/steering_angle", 1, &MainWindow::steeringAngleCallback, this);
     odomSub = nh.subscribe("/odom", 1, &MainWindow::odomCallback, this);
     depthSub = nh.subscribe("/depth", 1, &MainWindow::depthCallback, this);
 
