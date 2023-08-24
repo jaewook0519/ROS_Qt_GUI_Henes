@@ -10,10 +10,23 @@ cd ~/testui2_ws/src/
 ```
 **Clone repository to src folder**
 ```
-git clone https://github.com/ ...
+git clone https://github.com/jaewook0519/ROS_Qt_GUI_Henes.git
 ```
 **Catkin make**
 ```
 cd ~/testui2_ws/
 catkin_make
+source devel/setup.bash
+```
+**rosmaster**
+```
+roscore
+```
+**run gui**
+```
+rosrun testui2 testui2
+```
+** **
+```
+
 ```
