@@ -7,7 +7,6 @@ MainWindow::MainWindow(int argc, char *argv[], QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // 토픽 구독
     steeringAngleSub = nh.subscribe("/steering_angle", 1, &MainWindow::steeringAngleCallback, this);
     odomSub = nh.subscribe("/odom", 1, &MainWindow::odomCallback, this);
 }
