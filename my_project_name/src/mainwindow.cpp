@@ -7,7 +7,6 @@ MainWindow::MainWindow(int argc, char *argv[], QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // ROS 노드 초기화는 이제 main.cpp에서 처리됩니다.
     // 토픽 구독
     steeringAngleSub = nh.subscribe("/steering_angle", 1, &MainWindow::steeringAngleCallback, this);
     odomSub = nh.subscribe("/odom", 1, &MainWindow::odomCallback, this);
