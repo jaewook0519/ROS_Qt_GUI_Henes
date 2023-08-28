@@ -5,8 +5,8 @@ sudo apt-get install ros-melodic-qt-build
 ```
 **Create a catkin workspace**
 ```
-mkdir -p ~/testui2_ws_ws/src
-cd ~/testui2_ws/src/
+mkdir -p ~/testui2_ws_ws/
+cd ~/testui2_ws/
 ```
 **Clone repository to src folder**
 ```
