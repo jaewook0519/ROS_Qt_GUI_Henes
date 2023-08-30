@@ -13,6 +13,7 @@ cd ~/testui2_ws
 git clone https://github.com/jaewook0519/ROS_Qt_GUI_Henes.git
 ```
 Open the ROS_Qt_GUI_Henes file and move all internal files to testui2_ws
+
 **Catkin make**
 ```
 cd ~/testui2_ws/
