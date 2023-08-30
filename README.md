@@ -11,11 +11,8 @@ cd ~/testui2_ws
 **Clone repository to src folder**
 ```
 git clone https://github.com/jaewook0519/ROS_Qt_GUI_Henes.git
-cd ~/testui2_ws/ROS_Qt_GUI_Henes
-mv src testui2_ws
-mv testui2_ws.workspace testui2_ws
-mv testui2_ws.workspace.user testui2_ws
 ```
+Open the ROS_Qt_GUI_Henes file and move all internal files to testui2_ws
 **Catkin make**
 ```
 cd ~/testui2_ws/
