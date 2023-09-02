@@ -12,14 +12,14 @@ int main(int argc, char **argv)
 
     ros::Subscriber steeringAngleSub = nh.subscribe("/steering_angle", 1, &MainWindow::steeringAngleCallback, &w);
     ros::Subscriber odomSub = nh.subscribe("/odom", 1, &MainWindow::odomCallback, &w);
-    ros::Subscriber WaySteerControlSub = nh.subscribe("/Car_Control_cmd/W_SteerAngle_Int16",10, &MainWindow::WaySteerControlCallback, &w);
+    ros::Subscriber WaySteerControlSub = nh.subscribe("/Car_Control_cmd/SteerAngle_Int16",10, &MainWindow::WaySteerControlCallback, &w);
     ros::Subscriber PIDcarspeedSub = nh.subscribe("PID_car_speed",10, &MainWindow::PIDcarspeedCallback, &w);
     ros::Subscriber PIDerrorSub = nh.subscribe("PID_error",10, &MainWindow::PIDerrorCallback, &w);
     ros::Subscriber encoderarduinoSub = nh.subscribe("encoder_arduino", 10, &MainWindow::encoderarduinoCallback, &w);
 
     ros::Subscriber cameraImageSub = nh.subscribe("/camera/color/image_raw", 1, &MainWindow::imageCallback, &w);
 
-    ros::Subscriber gps_sub = nh.subscribe("/gps", 10, &MainWindow::gpsCallback, &w);  //
+    ros::Subscriber gps_sub = nh.subscribe("/ublox_gps/fix", 10, &MainWindow::gpsCallback, &w);  //
     ros::Subscriber pose_sub = nh.subscribe("/utm", 10, &MainWindow::poseCallback, &w);    //
 
     w.show();
