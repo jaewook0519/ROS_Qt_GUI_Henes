@@ -114,7 +114,7 @@ void MainWindow::imageCallback(const sensor_msgs::Image::ConstPtr& msg)
 {
     try
     {
-        cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);        //이미지 메시지를 OpenCV 이미지로 변환
+        cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::RGB8);        //이미지 메시지를 OpenCV 이미지로 변환
         QImage qimage(cv_ptr->image.data, cv_ptr->image.cols, cv_ptr->image.rows, cv_ptr->image.step, QImage::Format_RGB888);       //OpenCV 이미지 -> QImage 생성 // 이미지 데이터, 너비, 높이, 행당 바이트 수) 및 이미지 포맷 설정
 
         //리얼센스 집에오면 테스트해보기
@@ -134,7 +134,7 @@ void MainWindow::imageCallback2(const sensor_msgs::Image::ConstPtr& msg)
 {
     try
     {
-        cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+        cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::RGB8);
         QImage qimage(cv_ptr->image.data, cv_ptr->image.cols, cv_ptr->image.rows, cv_ptr->image.step, QImage::Format_RGB888);
 
         ui->cameraImageView2->setPixmap(QPixmap::fromImage(qimage));
